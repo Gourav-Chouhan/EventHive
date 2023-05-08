@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Outfit", sans-serif;
+}
+
+.main-page {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.main-page2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+	background-color: #f5f5f5;
+}
+
+.form-container form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 60%;
+	/* box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); */
+	border-radius: 10px;
+	padding: 30px;
+	background-color: #f0f0f0;
+}
+
+.form-container form * {
+	margin: 10px 0;
+}
+
+.form-container form input,
+.form-container form button {
+	width: 90%;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 14px;
+	padding: 30px;
+	background-color: black;
+	color: white;
+	font-size: 1.1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 10vh;
+	background-color: #f5f5f5;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 10vh;
+	background-color: black;
+	color: white;
+}
+
+.navbar a {
+	color: white;
+}
+
+.nav-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	width: 60%;
+	height: 100%;
+}
+
+.navbar-options {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 45%;
+	color: white;
+	height: 100%;
+	/* border: 2px solid red; */
+}
+
+.navbar-options:last-child {
+	display: flex;
+	justify-content: end;
+	color: white;
+	align-items: center;
+}
+
+.navbar-options a {
+	text-decoration: none;
+	color: black;
+	font-size: 1.2rem;
+	color: white;
+	margin: 0 20px;
+}
+
+.navbar-options a:hover {
+	color: #ccc;
+}
+
+body {
+	background-color: white;
+	color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: black;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #333;
+}
+
+button {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+	background-color: black;
+	color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+
+textarea {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
+
+.card {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+	margin: 1rem;
+	padding: 1.3rem;
+	width: 60%;
+}
+
+.card:hover {
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+	color: black;
+}
+
+.card p {
+	color: black;
+}
+
+.card a {
+	color: black;
+}
+
+.card a:hover {
+	color: #333;
+}
+
+.card img {
+	filter: grayscale(100%);
+	width: 100%;
+}
+
+.event {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.leftside {
+	width: 80%;
+}
+
+.rightside {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+}
+
+.rightside > * {
+	margin: 10px;
+}
+
+.description {
+	font-weight: 300;
+	font-size: 20px;
+	margin: 10px 0;
+}
+
+.location {
+	font-weight: 100;
+	font-size: 14px;
+	margin: 7px 0;
+}
+
+.add-event {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	margin-top: 200px;
+}
+
+.add-event label {
+	width: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.add-event label input {
+	width: 70%;
+	border-radius: 10px;
+	margin: 10px 0;
+	padding: 10px;
+}
