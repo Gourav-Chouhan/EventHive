@@ -1,0 +1,77 @@
+CREATE DATABASE my_database;
+
+USE my_database;
+
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE events (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  description TEXT NOT NULL,
+  start_time DATETIME NOT NULL,
+  end_time DATETIME NOT NULL,
+  location VARCHAR(255),
+  creator_id INT NOT NULL,
+  likes INT DEFAULT 0,
+  FOREIGN KEY (creator_id) REFERENCES users(id)
+);
+
+CREATE TABLE likes (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  event_id INT NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (event_id) REFERENCES events(id)
+);
+
+
+INSERT INTO users (username, password, email)
+VALUES
+  ('ram123', 'password1', 'ram@example.com'),
+  ('sita456', 'password2', 'sita@example.com'),
+  ('rahul789', 'password3', 'rahul@example.com'),
+  ('anita101', 'password4', 'anita@example.com'),
+  ('rohit321', 'password5', 'rohit@example.com'),
+  ('meena654', 'password6', 'meena@example.com'),
+  ('amit987', 'password7', 'amit@example.com'),
+  ('neha246', 'password8', 'neha@example.com'),
+  ('vikas369', 'password9', 'vikas@example.com'),
+  ('mala802', 'password10', 'mala@example.com');
+
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Summer Picnic', 'Enjoy the beautiful weather with our annual summer picnic event!', '2023-06-10 12:00:00', '2023-06-10 16:00:00', 'Central Park', 1, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Charity Walk', 'Join us for our annual charity walk event and help raise funds for a good cause!', '2023-07-15 08:00:00', '2023-07-15 11:00:00', 'Downtown', 2, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Tech Conference', 'Get the latest updates on the tech industry and network with fellow tech enthusiasts at our annual tech conference event!', '2023-09-01 09:00:00', '2023-09-03 17:00:00', 'Convention Center', 3, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Art Exhibition', 'Discover the latest art trends and marvel at beautiful works of art at our annual art exhibition event!', '2023-10-20 10:00:00', '2023-10-22 18:00:00', 'Museum of Art', 4, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Food Festival', 'Satisfy your taste buds with the delicious food and drinks at our annual food festival event!', '2023-11-25 12:00:00', '2023-11-27 20:00:00', 'City Square', 5, 0);
+
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Summer Picnic', 'Enjoy the beautiful weather with our annual summer picnic event!', '2023-06-10 12:00:00', '2023-06-10 16:00:00', 'Central Park', 1, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Charity Walk', 'Join us for our annual charity walk event and help raise funds for a good cause!', '2023-07-15 08:00:00', '2023-07-15 11:00:00', 'Downtown', 2, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Tech Conference', 'Get the latest updates on the tech industry and network with fellow tech enthusiasts at our annual tech conference event!', '2023-09-01 09:00:00', '2023-09-03 17:00:00', 'Convention Center', 3, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Art Exhibition', 'Discover the latest art trends and marvel at beautiful works of art at our annual art exhibition event!', '2023-10-20 10:00:00', '2023-10-22 18:00:00', 'Museum of Art', 4, 0);
+
+INSERT INTO events (title, description, start_time, end_time, location, creator_id, likes_count)
+VALUES ('Food Festival', 'Satisfy your taste buds with the delicious food and drinks at our annual food festival event!', '2023-11-25 12:00:00', '2023-11-27 20:00:00', 'City Square', 5, 0);

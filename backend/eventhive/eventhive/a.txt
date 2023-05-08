@@ -1,0 +1,7 @@
+{
+  "title": "d",
+  "description": "d",
+  "start_time": "10/04/23",
+  "end_time": "10/05/23",
+  "location": "Bhopal"
+}
