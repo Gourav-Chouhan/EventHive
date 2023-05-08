@@ -31,9 +31,8 @@ A brief description of how to use this project.
 ![ss](https://imgur.com/3wDCBDk.png)
 ![ss](https://imgur.com/dPs1P3v.png)
 ![ss](https://imgur.com/UdiuPUC.png)
-![ss](https://imgur.com/UnM6pqP.png)
 
-[![React Crash Course for Beginners 2021 - YouTube](https://img.youtube.com/vi/3kFA_dAsXdU/0.jpg)](https://www.youtube.com/watch?v=3kFA_dAsXdU)
+[![Watch the video](https://img.youtube.com/vi/3kFA_dAsXdU/0.jpg)](https://www.youtube.com/watch?v=3kFA_dAsXdU)
 
 License
 This project is licensed under the MIT License.
