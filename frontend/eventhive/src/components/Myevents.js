@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Event from "./Event";
+import { url } from "./constants";
 
 function Myevents({ user }) {
 	const [Myevents, setMyevents] = useState([]);
 
 	useEffect(() => {
-		fetch("http://127.0.0.1:8000/get_user_events/", {
+		fetch(`${url}/get_user_events/`, {
 			method: "POST",
 			body: JSON.stringify(user),
 			headers: { "Content-Type": "application/json" },

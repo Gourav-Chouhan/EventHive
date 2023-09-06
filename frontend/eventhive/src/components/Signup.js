@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { url } from "./constants";
 import { Link } from "react-router-dom";
 const Signup = () => {
 	const [username, setUsername] = useState("");
@@ -20,7 +21,7 @@ const Signup = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		fetch("http://127.0.0.1:8000/signup/", {
+		fetch(`${url}/signup/`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

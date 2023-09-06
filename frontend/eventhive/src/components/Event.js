@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { url } from "./constants";
 
 function Event(props) {
 	console.log("liked", props.event.is_liked);
@@ -12,8 +13,7 @@ function Event(props) {
 		} else {
 			setNumLikes(numLikes + 1);
 		}
-		console.log("hi", isLiked);
-		fetch("http://localhost:8000/like_event/", {
+		fetch(`${url}/like_event/`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

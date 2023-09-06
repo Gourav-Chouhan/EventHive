@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { url } from "./constants";
 
 function AddEvent({ user }) {
 	const [title, setTitle] = useState("");
@@ -9,7 +10,7 @@ function AddEvent({ user }) {
 		event.preventDefault();
 
 		// Send a POST request to the server to add the new event
-		fetch("http://localhost:8000/add_event/", {
+		fetch(`${url}/add_event/`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

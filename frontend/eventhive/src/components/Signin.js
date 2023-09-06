@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { url } from "./constants";
+import { Link } from "react-router-dom";
 function Signin({ setLoggedIn, setUser }) {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -15,7 +16,7 @@ function Signin({ setLoggedIn, setUser }) {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		fetch("http://127.0.0.1:8000/signin/", {
+		fetch(`${url}/signin/`, {
 			method: "POST",
 			body: JSON.stringify({ username: username, password: password }),
 			headers: { "Content-Type": "application/json" },
